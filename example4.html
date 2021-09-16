@@ -30,6 +30,8 @@
 			background:#4C90D8; 
 			padding:20px;
 			color:#fff; 
+		  position: absolute;
+			left: 50px;
 		}
 
 	</style>
@@ -53,9 +55,38 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
-        
-    </script>
+				// 
+        $("#growbox").click(function(){
+					$("#box").animate({width: "710"});
+				});
 
+				//
+				$("#growtext").click(function(){
+					$("#box").animate({fontSize: "24px"},1000);
+				});
+
+				//
+				$("#movebox").click(function(){
+					$("#box").animate({left: "+=300px"});
+				});
+
+				$("#doall").click(function(){
+					$("#box").animate({
+						width: "710px",
+						fontSize: "24px",
+						left:"+=310px"
+				});
+				});
+
+				$("#sequence").click(function(){
+					$("#box").animate({width: "710px"},1500,function(){
+						$("#box").animate({fontSize: "24px"},1000,function(){
+							$("#box").animate({left: "+=300px"});
+						});
+					});
+				});
+    </script>
+ 
 </body>
 
 </html>
