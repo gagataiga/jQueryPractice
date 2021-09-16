@@ -46,7 +46,26 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
-        
+
+			$("#fadeoutbox").click(function(){
+				$("#box").fadeOut("slow");
+			});
+
+			$("#fadeinbox").click(function(){
+				$("#box").fadeIn(3000,"swing",function(){
+					alert("done");
+				});
+			});
+
+			$("#fadeto20box").click(function(){
+				$("#box").fadeTo(2000,0.2);
+			});
+
+			$("#fadeto100box").click(function(){
+				$("#box").fadeTo(2000,1);
+			})
+
+
     </script>
 
 </body>
